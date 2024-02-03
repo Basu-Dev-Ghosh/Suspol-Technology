@@ -1,0 +1,287 @@
+/* .headline{
+	font-size: 70px;
+	font-family: 
+
+} */
+body{
+	padding:10px 50px;
+}
+/*header part*/
+.header {
+	height: 48px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	/*	background-color: red;*/
+}
+
+.logo {
+	height: 48px;
+	width: 18%;
+	float: left;
+	background-color: yellow;
+
+}
+
+.layoutsection {
+	height: 48px;
+	width: 68%;
+	float: left;
+	/*	background-color: greenyellow;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	/*	background-color:lightblue; */
+
+}
+
+.layoutsection span {
+	font-size: 18px;
+	margin-top: 8px;
+	position: relative;
+	top: 4px;
+	colour: darkblue;
+}
+
+.layoutsection span:hover {
+	color: darkblue;
+}
+
+.callsection {
+	height: 48px;
+	width: 10%;
+	background-color: royalblue;
+	float: left;
+	border-radius: 40px;
+}
+
+.callsection span {
+	font-size: 18px;
+
+	position: relative;
+	top: 12px;
+	left: 42px;
+	color: white;
+}
+
+.callsection span :hover {
+	border-radius: 0px;
+	background-color: lightblue;
+}
+
+/* About us section*/
+.Aboutsection {
+	height: auto;
+	width: 100%;
+	padding: 16px;
+}
+
+.About {
+	height: auto;
+	width: 50%;
+
+}
+
+.Aboutheader {
+	height: auto;
+	width: 100%;
+
+}
+
+.Aboutheader span {
+	color: darkslateblue;
+	font-size: 16px;
+}
+
+.Aboutcontentheader {
+	height: auto;
+	width: 100%;
+}
+
+.Aboutcontentpart {
+	height: auto;
+	width: 100%;
+
+}
+
+.Aboutcontentpart span {
+	font-size: 18px;
+}
+
+.Aboutcontentpart li {
+	font-size: 18px;
+}
+
+/*team section*/
+.teamsection {
+	height: auto;
+	width: 100%;
+
+}
+
+.teamsectionheader {
+	height: auto;
+	width: 100%;
+}
+
+.teamsectioncontentheader {
+	height: auto;
+	width: 100%;
+}
+
+.teamsectioncontentheader span {
+	font-size: 18px;
+
+}
+
+/*teamsectionfounders*/
+.teamsectionfounders {
+	height: auto;
+	width: 100%;
+
+}
+
+.teamsectionfoundersheader {
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.teamsectionfounderscontent1 {
+	height: auto;
+	width: 40%;
+	float: left;
+	position: relative;
+	left: 400px;
+}
+
+.teamsectionfounderscontent2 {
+	height: auto;
+	width: 50%;
+	float: left;
+	position: relative;
+	left: 200px;
+}
+
+/*teamsectionprofessionals*/
+.teamsectionprofessionals {
+	height: auto;
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.teamsectionprofessionalsheader {
+	height: auto;
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+ .teamsectionprofessionalscontent {
+	height: auto;
+	width: 100%;
+	float: left;
+
+}
+
+.teamsectionprofessionalscontent1 {
+
+	height: auto;
+	width: 20%;
+	float: left;
+	position: relative;
+	left: 120px;
+}
+.home{
+	width: 100%;
+	display: flex;
+	/*background-color: red*/
+	/*justify-content: space-around;*/
+
+}
+.part{
+	width: 50%;
+	
+}
+.name{
+width: 50%;
+	
+}
+.discover {
+	/*background-color: yellow;*/
+	padding: 50px 0px;
+}
+.row1 h2{
+	text-align: center;
+	padding: 10px;
+	font-size: 30px;
+	font-weight: lighter;
+}
+.row2{
+	width: 100%;
+	display: flex;
+}
+.Phosphogypsum{
+	width: 50%;	
+
+}
+.explore{
+	width: 50%;
+
+}
+.Phosphogypsum h3{
+	text-align: center;
+	font-size: 25px;	
+
+}
+.Phosphogypsum p{
+	
+	font-size: 25px;
+}
+.explore p{
+	padding: 20px;
+	font-size: 25px;
+}
+.profitable{
+	width: 50%;
+}
+.profitable h3{
+ 	text-align: center;
+	font-size: 25px;
+}
+.profitable p{
+	font-size: 25px;
+}
+.row0 h2{
+	text-align: center;
+	padding: 10px;
+	font-size: 40px;
+
+}
+.Phosphogypsum h3 span{
+	font-weight: lighter;
+	display: block;
+	text-align: left;
+}
+.profitable li{
+	font-size: 25px;
+	font-weight: bold;
+}
+.profitable li span{
+	font-weight: lighter;
+}
+.row4 h2{
+	text-align: center;
+	font-size: 25px;
+	font-weight: lighter;
+}
+.row4 h2 span{
+	font-weight: bold;
+}

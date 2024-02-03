@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Noto+Sans+HK:wght@100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Noto+Sans+HK:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Suspol Technology</title>
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .home {
+        height: 90vh;
+        background-image: url("./assets/images/wave.png");
+        background-repeat: no-repeat;
+        background-position-x: 70px;
+        background-position-y: 155px;
+        background-size: cover;
+      }
+      .headline {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-size: 3.5rem;
+        font-style: normal;
+        color: rgb(39, 39, 39);
+      }
+      .name {
+        color: rgb(72, 72, 72);
+      }
+      .mobile-nav {
+        position: absolute;
+        width: 100%;
+        top: -600px;
+        background: #fff;
+        z-index: 1000;
+        padding-block: 20px;
+        margin-top: 10px;
+      }
+      .active {
+        color: rgb(10, 95, 174);
+      }
+      @media only screen and (max-width: 600px) {
+        .home {
+          height: 100vh;
+          background-image: url("./assets/images/wave.png");
+          background-repeat: no-repeat;
+          background-position: bottom;
+          background-position-x: -200px;
+          background-size: cover;
+        }
+        .headline {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="project.css"> -->
+  </head>
+  <body>
+    <div
+      class="header flex px-8 md:px-16 justify-between py-6 items-center border-b md:border-0"
+    >
+      <div class="logo text-2xl font-semibold">
+        <h1>Suspol</h1>
+      </div>
+      <div class="layoutsection hidden md:flex ml-24">
+        <a class="mx-3 cursor-pointer active">Home</a>
+        <a class="mx-3 cursor-pointer">About</a>
+        <a class="mx-3 cursor-pointer">Our mission</a>
+        <a class="mx-3 cursor-pointer">Our technology</a>
+        <a class="mx-3 cursor-pointer">Team</a>
+        <a class="mx-3 cursor-pointer">Contact</a>
+        <a class="mx-3 cursor-pointer">Supported by</a>
+      </div>
+      <button
+        class="callsection hidden md:block bg-blue-500 px-12 text-white py-3 rounded-3xl hover:bg-black transition-all ease-in-out duration-300"
+      >
+        Call now
+      </button>
+      <button id="nav-menu" class="md:hidden" onclick="show()">
+        <svg
+          width="34px"
+          height="34px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+              fill="#000000"
+            ></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="md:hidden flex flex-col items-center overflow-hidden mobile-nav transition-all ease-in-out duration-500"
+    >
+      <a class="mx-3 cursor-pointer my-4">Home</a>
+      <a class="mx-3 cursor-pointer my-4">About us</a>
+      <a class="mx-3 cursor-pointer my-4">Our mission</a>
+      <a class="mx-3 cursor-pointer my-4">Our technology</a>
+      <a class="mx-3 cursor-pointer my-4">Team</a>
+      <a class="mx-3 cursor-pointer my-4">Contact</a>
+      <a class="mx-3 cursor-pointer my-4">Supported by</a>
+      <button
+        class="callsection bg-blue-500 px-12 text-white py-3 rounded-3xl hover:bg-black transition-all ease-in-out duration-300"
+      >
+        Call now
+      </button>
+    </div>
+
+    <div class="home flex">
+      <div class="name md:w-3/5 flex flex-col md:py-16 md:px-24 py-8 px-8">
+        <div class="headline font-bold">
+          Welcome to Suspol Technologies Pvt.Ltd.
+        </div>
+        <p class="mt-3 text-base md:text-xl">
+          Innovating Solutions for Sustainable Future
+        </p>
+        <div class="headline_about mt-2 text-gray-600 text-xs md:text-base">
+          At Suspol Technologies Pvt. Ltd., we are committed to revolutionizing
+          waste management and creating value from industrial by-products. Our
+          cutting-edge technologies not only address environmental challenges
+          but also contribute to the development of sustainable solutions.
+        </div>
+        <button
+          class="callsection mt-8 w-48 bg-black md:bg-blue-600 text-white py-3 rounded-3xl hover:bg-black transition-all ease-in-out duration-300"
+        >
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- <div class="Aboutsection">
+<div class="About">
+	<div class="Aboutheader">
+		<span><h4>ABOUT</h4></span>
+	</div>
+	<div class="Aboutcontentheader">
+	<h3><b>About Suspol Technologies Pvt. Ltd.
+	<br> Empowering Change Through Innovation</b></h3>
+</div>
+<div class="Aboutcontentpart">
+<span>Suspol Technologies Pvt. Ltd. is a registered startup in India, recognized by Startup India and DPIIT. Founded by Mr. Mriganka Saha and Mrs. Pallavi Wahane, our company is dedicated to developing sustainable technologies for industrial waste management.</span>
+
+<br><b><h3>Key Highlights:</h3></b>
+<ul>
+<li><b> Leadership Team</b>: Meet the founders and leaders driving innovation at Suspol Technologies</li>
+<li><b> Incubation at TBI KIIT Bhubaneswar</b>: Currently incubated at TBI KIIT Bhubaneswar, we are at the forefront of technological advancements</li>
+</ul>
+</div>
+	</div>
+</div>
+<div class="teamsection">
+<div class="teamsectionheader">
+	<p style="text-align:center;font-size:24px;font-weight: bold;">Our Team</p>
+</div>
+
+<div class="teamsectioncontentheader">
+	<p style="text-align:center;font-size: 18px;";><b>Meet the minds behind Suspol Technologies</b> Driven by Passion,Focused on Innovation
+	</p>
+</div>
+<div class="teamsectionfounders">
+	<div class="teamsectionfoundersheader">
+		<b><p style="text-align:center ;font-size:20px;width: 160px;"> Our Founders</p></b>
+	</div>
+	<div class="teamsectionfounderscontent1">
+	<p><img src="C:\Users\Neha\Desktop\FRONTEND DEVELOPER\SUSPOL WEBSITE/tsports.jpg" height="200px" width="226px" style="border-radius: 50%;"><h3>Mr.Mriganka Saha</h3></p>
+</div>
+<div class="teamsectionfounderscontent2">
+	<p ><img src="C:\Users\Neha\Desktop\FRONTEND DEVELOPER\SUSPOL WEBSITE/tsports.jpg" height="200px" width="226px" style="border-radius: 50%;"><h3> Mrs. Pallavi Wahane</h3></p>
+</div>
+	</div>
+	<div class="teamsectionprofessionals">
+		<b><p style="text-align:center;font-size:20px;width: 160px;font-size: 20px;"> Dedicated Professionals</p></b>
+	</div>
+	<div class="teamsectionprofessionalsheader">
+		<p style="text-align:center;font-size: 18px";>A dynamic team of experts contributing to our success
+	</p>
+	</div>
+	<div class="teamsectionprofessionalscontent">
+	<div class="teamsectionprofessionalscontent1">
+		<p><img src="C:\Users\Neha\Desktop\FRONTEND DEVELOPER\SUSPOL WEBSITE/tsports.jpg" height="200px" width="226px" style="border-radius: 50%;"><h3 >PROF1</h3></p>
+	</div>
+	<div class="teamsectionprofessionalscontent1">
+		<p><img src="C:\Users\Neha\Desktop\FRONTEND DEVELOPER\SUSPOL WEBSITE/tsports.jpg" height="200px" width="226px" style="border-radius: 50%;"><h3>PROF2</h3></p>
+	</div>
+	<div class="teamsectionprofessionalscontent1">
+		<p><img src="C:\Users\Neha\Desktop\FRONTEND DEVELOPER\SUSPOL WEBSITE/tsports.jpg" height="200px" width="226px" style="border-radius: 50%;"><h3>PROF3</h3></p>
+	</div>
+	<div class="teamsectionprofessionalscontent1">
+		<p><img src="C:\Users\Neha\Desktop\FRONTEND DEVELOPER\SUSPOL WEBSITE/tsports.jpg" height="200px" width="226px" style="border-radius: 50%;"><h3>PROF4</h3></p>
+	</div>
+</div>
+</div>
+	
+
+	<div class="discover">
+		<div class="row1"><h2>Discover Our Innovative Approach</h2></div>
+		<div class="row2">
+			<div class="Phosphogypsum">
+				<h3>Phosphogypsum Upgradation Process: </h3>
+				<p>*  Learn how we're transforming phosphogypsum into valuable resources.</p>
+			</div>
+
+			<div class="explore">
+					<p>*  Explore our journey in developing a pilot unit to treat phosphogypsum with a capacity of 10 TPD to showcase our groundbreaking process.
+					</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="discover">
+		<div class="row1"><h2>Why Choose Suspol Technologies?</h2></div>
+		<div class="row2">
+			<div class="Phosphogypsum">
+				<h3>Environmental Responsibility: </h3>
+				<p>*  Our process reduces waste by 95%, minimizing the environmental impact.</p>
+			</div>
+
+			<div class="profitable">
+				<h3>Profitable Solutions: </h3>
+				<p>*  We have turned an environmental challenge into a profitable opportunity.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="discover">
+		<div class="row0"><h2>Our Mission</h2></div>
+		<div class="row2">
+			<div class="Phosphogypsum">
+				<h3>Mission:<span> Redefining Waste Management Creating Value from Industrial By-Products</span></h3>
+				<p>* At Suspol Technologies Pvt. Ltd., our mission is to revolutionize waste management by developing eco-friendly and profitable solutions. We aim to contribute to a sustainable future by addressing the challenges posed by industrial waste.</p>
+			</div>
+
+			<div class="profitable">
+				<h3>Our Commitment: </h3>
+				<p>
+					<ul>
+						<li>
+							Environmental Impact:
+							<span>
+								Minimize waste and reduce environmental footprint.
+							</span>
+						</li>
+						<br>
+						<li>
+							Value Creation
+							<span>
+								Transform waste into valuable products for various industries.
+							</span>
+						</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="discover">
+		<div class="row0"><h2>Our Technology</h2></div>
+		<div class="row4"><h2><span>Innovative Technology for a Sustainable Future</span> Phosphogypsum Upgradation Process</h2></div>
+		<div class="row2">
+			<div class="profitable">
+				<h3>Understanding the Innovation:</h3>
+				<p>
+					<ul>
+						<li>
+							Background:
+							<span>
+								Explore the demand for phosphate-based fertilizers and the challenges posed by phosphogypsum.
+							</span>
+						</li>
+						<br>
+						<li>
+							Our Solution: 
+							<span>
+								Learn about our unique process that recovers Phosphoric Acid, creating valuable by-products with reduced impurities.
+							</span>
+						</li>
+					</ul>
+				</p>
+			</div>
+
+			<div class="profitable">
+				<h3>Advantages of Our Technology:</h3>
+				<p>
+					<ul>
+						<li>
+							Profitability:
+							<span>
+								Commercially viable solutions with a focus on profitability.
+							</span>
+						</li>
+						<br>
+						<li>
+							Eco-Friendly: 
+							<span>
+								Lower environmental impact compared to traditional manufacturing processes.
+							</span>
+						</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div> -->
+
+    <!-- <h2> Why Choose Suspol Technologies?</h2>
+		<ul>
+			<li>
+				<h3>Environmental Responsibility: </h3>
+				<span>Our process reduces waste by 95%, minimizing the environmental impact.</span>
+			</li>
+			<li>
+				<h3>Profitable Solutions: </h3>
+				<span>We have turned an environmental challenge into a profitable opportunity.</span>
+			</li>
+		</ul> -->
+
+    <script>
+      let mobileNav = document.querySelector(".mobile-nav");
+      document.getElementById("nav-menu").onclick = show;
+      function show() {
+        if (mobileNav.style.top === "-600px" || mobileNav.style.top === "") {
+          mobileNav.style.top = "60px";
+        } else {
+          mobileNav.style.top = "-600px";
+        }
+      }
+    </script>
+  </body>
+</html>
